@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Git y GitHub</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/main']">
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Imagen del curso -->
+  <div class="course-image">
+    <img src="assets/img/git.jpeg" alt="Curso de Git" />
+  </div>
+
+  <!-- Nombre y descripción del curso -->
+  <h2>Curso de Git y GitHub desde Cero</h2>
+  <p>Aprende Git y GitHub desde lo básico hasta avanzado con ejemplos prácticos.</p>
+
+  <!-- Calificación con estrellas -->
+  <div class="rating">
+    <ion-icon
+      *ngFor="let star of [1, 2, 3, 4, 5]; let i = index"
+      [name]="i < rating ? 'star' : 'star-outline'"
+      (click)="rateCourse(i + 1)">
+    </ion-icon>
+  </div>
+
+    <!-- Botón que redirige a la página de suscripción -->
+    <ion-button expand="block" (click)="goToSubscription()">Empieza ya</ion-button>
+</ion-content>

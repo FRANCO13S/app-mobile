@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Restablece tu contraseña</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/login']">
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form class="modal-container">
+    <div>
+    <ion-item>
+      <ion-list>
+        <h2><label>Recupera tu cuenta</label></h2>
+        <h4><label>Ingresa tu correo electrónico para recuperar tu cuenta</label></h4>
+      <div><br />
+        <ion-input label="Correo Electronico" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+      <br /></div>
+      <div class="center-buttons">
+        <ion-button [routerLink]="['/login']" class="large-button"> Cancelar </ion-button>
+        <ion-button [routerLink]="['']" class="large-button"> Confirmar </ion-button>
+      </div>
+      </ion-list>
+    </ion-item>
+  </div>
+  </form>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <a>
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Inicia sesión</ion-title>
+    <ion-buttons slot="end" class="cerrar">
+      <ion-button [routerLink]="['/tabinicial']">
+        Cerrar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+  <div class="modal-container">
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+        <img src="assets/img/logo.png" alt="Logo">
+    </ion-buttons>
+    <h1>GuimarBot</h1>
+    <h5>Ingresar o crear una cuenta con:</h5>
+      <div class="input-group">
+        <ion-item>
+          <ion-list>
+          <br />
+        <ion-input [(ngModel)]="credenciales.correo" [ngModelOptions]="{standalone: true}"
+        label="Correo Electronico" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+      <br />
+        <ion-input [(ngModel)]="credenciales.contra" [ngModelOptions]="{standalone: true}"
+        label="Contraseña" label-placement="floating" fill="outline" type="password"  placeholder="Ingrese aquí">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      <br />
+          </ion-list>
+        </ion-item>
+        <h6><ion-a [routerLink]="['/rest-contra']">¿Has olvidado la contraseña?</ion-a></h6>
+      </div>
+      <div>
+        <ion-button expand="block" type="submit" (click)="login()" >Acceder</ion-button>
+      </div>
+    <h6><ion-label [routerLink]="['/registrarse']">o registrate aquí</ion-label></h6>
+  </div>
+</form>
+</ion-content>

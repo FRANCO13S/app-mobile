@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Planes de Subscripción</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/main']">
+        Cerrar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Sección Plan Básico -->
+  <div class="plan-card">
+    <h2>Plan Básico</h2>
+    <p>Precio: 200 soles</p>
+    <p>Incluye acceso a contenidos básicos y proyectos iniciales.</p>
+    <ion-button expand="block" color="primary" [routerLink]="['/confirma-plan']">
+      Elegir Plan Básico
+    </ion-button>
+  </div>
+
+  <!-- Sección Plan Avanzado -->
+  <div class="plan-card">
+    <h2>Plan Avanzado</h2>
+    <p>Precio: 350 soles</p>
+    <p>Incluye acceso a todos los contenidos avanzados y soporte personalizado.</p>
+    <ion-button expand="block" color="secondary" [routerLink]="['/confirma-plan']">
+      Elegir Plan Avanzado
+    </ion-button>
+  </div>
+
+  <!-- Sección Plan Expert Grupo -->
+  <div class="plan-card">
+    <h2>Plan Expert Grupo</h2>
+    <p>Precio: 500 soles</p>
+    <p>Acceso para grupos, incluye materiales exclusivos y tutorías en vivo.</p>
+    <ion-button expand="block" color="tertiary" [routerLink]="['/confirma-plan']">
+      Elegir Plan Expert Grupo
+    </ion-button>
+  </div>
+</ion-content>

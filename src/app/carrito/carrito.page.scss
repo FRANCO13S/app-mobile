@@ -1,0 +1,20 @@
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+.cerrar:hover{
+  background-color: #d00000;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+ion-button {
+  margin-left: auto;
+}

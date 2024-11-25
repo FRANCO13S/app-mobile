@@ -1,0 +1,266 @@
+img.logo {
+    height: 40px; /* Ajusta la altura del logo */
+    margin-left: 10px; /* Margen para separarlo del borde */
+  }
+
+.cerrar:hover{
+    background-color: #d00000;
+  }
+
+  .payment-container {
+    margin: auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 90px;
+    margin-left: 22px;
+    text-align: center;
+  }
+
+  .payment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    .order-number {
+      text-align: right;
+      padding-left: 130px;
+      p {
+        margin: 0;
+      }
+      .order-id {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  .method {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 5px;
+    margin: 0 0.2rem;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .notice {
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .payment-form {
+    text-align: left;
+  }
+
+  .card-icons {
+    display: flex;
+    gap: 0.2rem;
+    margin-left: auto;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .pay-button {
+    --background: #009688;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .payment-methods button {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 10px;
+    width: 100px; /* Ajusta el tamaño según necesites */
+    height: 80px; /* Ajusta el tamaño según necesites */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .payment-methods button ion-img {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .payment-methods button.active {
+    background-color: #e0f7fa; /* Cambia el color de fondo para el botón activo */
+    border-color: #009688;
+  }
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+    ion-icon {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+
+.qr-container {
+  text-align: center;
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    color: #555;
+    text-align: center;
+  }
+
+  .total-amount {
+    align-items: center;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+    span {
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #00c3b6;
+    }
+  }
+
+  .qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 16px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .wallet-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.yape-instructions {
+  background-color: #f3e5f5;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+
+  .yape-logo0 {
+    align-items: center;
+    width: 90px;
+    margin-bottom: 16px;
+  }
+
+  .yape-logo1 {
+    align-items: center;
+    width: 95px;
+    padding-top: 0px;
+    padding-left: 40px;
+  }
+
+  .yape-logo2 {
+    align-items: center;
+    width: 95px;
+    margin-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #9c27b0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    color: #5f5c5c;
+    margin: 4px 0;
+  }
+
+  .donde{
+    font-size: 17px;
+    color: #5f5c5c;
+    margin: 4px 0;
+    padding-bottom: 20px;
+  }
+
+  .yape-info {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #757575;
+
+    img {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.cont{
+  --background: #9c27b0;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+
+  img {
+    width: 40px;
+    margin-left: 4px;
+  }
+}

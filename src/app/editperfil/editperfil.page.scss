@@ -1,0 +1,32 @@
+.cerrar:hover{
+  background-color: #d00000;
+}
+
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+.modal-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 90px;
+  margin-left: 22px;
+}
+
+
+  h1{
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  h5{
+    align-items: center;
+    text-align: center;
+    font-size: 22px;  
+  }

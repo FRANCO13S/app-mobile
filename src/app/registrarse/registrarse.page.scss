@@ -1,0 +1,90 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cerrar:hover{
+  background-color: #d00000;
+}
+
+h1{
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 44px;
+}
+
+.modal-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 22px;
+  text-align: center;
+}
+
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.buton {
+  --background: rgb(23, 171, 23);
+}
+
+.toast{
+  --background: #2ce210;  // Fondo del Toast (color oscuro)
+  --color: #000000;  // Color del texto
+  --padding-start: 16px;  // Espaciado izquierdo
+  --padding-end: 16px;  // Espaciado derecho
+  --border-radius: 10px;  // Bordes redondeados
+
+  /* Para que aparezca un poco más arriba */
+  bottom: 50px !important;  // Ajusta este valor según necesites
+
+  /* Añadir sombra para un efecto más elegante */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* Añadir animaciones opcionales */
+  animation: fadeInUp 0.3s ease-out, fadeOutDown 0.3s ease-in 4.7s;
+}
+
+/* Animaciones opcionales para el toast */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+

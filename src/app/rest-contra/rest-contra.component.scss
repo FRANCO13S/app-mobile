@@ -1,0 +1,49 @@
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+}
+
+.pts {
+  padding-top: 5px;
+}
+
+.cerrar:hover{
+  background-color: #d00000;
+}
+
+.modal-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 90px;
+  margin-left: 22px;
+  text-align: center;
+}
+
+.center-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Añade espacio entre los botones si lo deseas */
+}
+
+.large-button {
+  --padding-start: 25px;
+  --padding-end: 25px;
+  --font-size: 16px;
+  --border-radius: 4px; /* Opcional: bordes redondeados */
+  min-width: 30px; /* Establece un ancho mínimo */
+  height: 40px; /* Aumenta la altura del botón */
+}
+

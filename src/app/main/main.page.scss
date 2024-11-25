@@ -1,0 +1,122 @@
+*{
+  background-color: white;
+}
+ion-content {
+  --background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3b3b98;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#schools-list {
+  padding: 40px;
+  padding-top: 10px;
+  background-color: #ffffff;
+}
+
+.school-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: var(--color);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.school-link:hover {
+  background-color: var(--color2);
+}
+
+ion-list{
+  background-color: #ffffff;
+}
+
+.school-img {
+  border-radius: 40%;
+}
+
+.school-text {
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.school-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.school-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.school-icon {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+/* Elimina espacio adicional y ajusta el contenedor */
+.search-bar-container {
+  background-color: white; /* Cambia el fondo a negro */
+  border-radius: 8px; /* Opción de bordes redondeados, ajustable */
+  margin: 30px;
+  margin-bottom: 10px;
+  border: 4px solid #28a745;
+  border-radius: 8px;
+}
+
+/* Ajusta el campo de entrada (input) */
+.search-input {
+  background: white; /* Sin fondo */
+  color: black; /* Texto blanco */
+  padding-left: 10px; /* Espacio para que el placeholder no esté pegado al borde */
+  --placeholder-color: gray; /* Color del placeholder */
+}
+
+.search-button {
+  background-color: white;
+}
+
+/* Ajusta el tamaño de la imagen dentro del botón */
+.search-icon {
+  width: 24px; /* Ajusta el tamaño de la imagen */
+  height: 24px;
+}
+
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+ion-icon {
+  font-size: 24px;
+  color: black;
+}

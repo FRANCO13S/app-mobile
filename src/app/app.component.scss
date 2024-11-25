@@ -1,0 +1,21 @@
+
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+ion-toolbar {
+  background-color: #fff; /* Fondo del toolbar */
+  ion-title {
+    font-size: 1.5rem;
+  }
+}
+
+ion-menu-button {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+ion-item {
+  --background: transparent;
+}

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Confirma tu Plan</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/main']">
+        Cerrar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Mostrar el plan seleccionado -->
+  <div class="selected-plan">
+    <h2>Plan Seleccionado: {{ plan }}</h2>
+  </div>
+
+  <!-- Formulario para capturar nombres y correo -->
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombres completos</ion-label>
+      <ion-input type="text" [(ngModel)]="fullName" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón para proceder -->
+  <ion-button expand="block" (click)="submitForm()">Confirmar y Continuar</ion-button>
+</ion-content>

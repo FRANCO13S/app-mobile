@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/main']">
+        Cerrar
+      </ion-button>
+
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToSettings($event)">
+        <ion-icon slot="icon-only" name="setting"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Sección de foto de perfil -->
+  <div class="profile-photo-container">
+    <img src="assets/img/java.jpeg" alt="Foto de Perfil" class="profile-photo" />
+  </div>
+
+  <!-- Nombre del usuario -->
+
+    <ion-list *ngIf="info">
+      <ion-item class="user-name">
+        <ion-label>
+          {{info.nombres}}
+          {{info.apellidos}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+  <!-- Botones de acción debajo del nombre -->
+  <div class="action-buttons">
+    <ion-button fill="outline" color="primary">Cursos</ion-button>
+    <ion-button fill="outline" color="success">Certificados</ion-button>
+    <ion-button fill="outline" color="danger">Racha</ion-button>
+  </div>
+
+
+  <!-- Lista de opciones para completar el perfil -->
+  <ion-list lines="full" *ngIf="info">
+    <ion-item>
+      <ion-label style="font-weight: bold;">Correo electrónico :</ion-label><br>
+      <ion-label>{{info?.correo}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="font-weight: bold;">Teléfono :</ion-label> <br>
+      <ion-label>{{info?.telefono}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="font-weight: bold;">Dirección :</ion-label><br>
+      <ion-label>{{info?.direccion}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="font-weight: bold;">Fecha de nacimiento :</ion-label>
+      <ion-label>{{info?.fena}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

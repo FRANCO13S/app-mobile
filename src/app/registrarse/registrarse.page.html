@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Registrate</ion-title>
+    <ion-buttons slot="end" class="cerrar">
+      <ion-button [routerLink]="['/login']">
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <div>
+    <h1>GuimarBot</h1>
+    </div>
+    <div class="modal-container">
+      <h3>Crea una nueva cuenta</h3>
+      <p>es fácil y rápido</p>
+
+    <ion-item>
+      <ion-list>
+      <br />
+        <ion-input [(ngModel)]="datos.nombres" [ngModelOptions]="{standalone: true}"
+        label="Nombres" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+      <br />
+        <ion-input [(ngModel)]="datos.apellidos" [ngModelOptions]="{standalone: true}"
+        label="Apellidos" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+      <br />
+        <ion-input [(ngModel)]="datos.correo" [ngModelOptions]="{standalone: true}"
+        label="Correo Electronico" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+      <br />
+        <ion-input [(ngModel)]="datos.contra" [ngModelOptions]="{standalone: true}"
+        label="Contraseña" label-placement="floating" fill="outline" type="password" placeholder="Ingrese aquí">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      <br />
+        <ion-input [(ngModel)]="datos.fena" [ngModelOptions]="{standalone: true}"
+        label="Fecha de nacimiento" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+      </ion-list>
+    </ion-item>
+      <br />
+  <ion-button (click)="registrar()" class="buton" expand="block" type="submit"> Registrar</ion-button>
+
+  <div *ngIf="cargando" style="text-align: center;">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+
+  <ion-item>
+
+    
+  </ion-item>
+
+</div>
+
+</form>
+
+</ion-content>
+

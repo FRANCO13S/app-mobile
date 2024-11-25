@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>GuimarBot</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/login']" *ngIf="login === false">
+        Acceder
+      </ion-button>
+      <!-- Menu button on the right -->
+      <ion-menu-button menu="main-menu" id="hamburgerButton"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/cursos']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="content-container">
+    <h1 class="main-title">Aprende a Programar, <br> Crea Sin Límites</h1>
+    <h3 class="sub-title">Organización de educación en tecnologías y crecimiento personal para niños y jóvenes.</h3>
+
+  <!-- Contenedor de la barra de búsqueda -->
+    <ion-item>
+      <ion-searchbar animated="true" placeholder="¿Qué quieres aprender hoy?"></ion-searchbar>
+    </ion-item>
+
+    <section id="schools-list" class="SchoolsList_SchoolsList__V9ovD">
+      <ion-list>
+        <!-- Primer Curso -->
+        <ion-item class="school-link" [routerLink]="['/curso1']">
+          <ion-avatar slot="start">
+            <img
+              alt="Ejemplo 1"
+              src="https://old.diplomadosonline.com/wp-content/uploads/2022/09/Banner-git-github.jpg"
+              class="school-img"
+            />
+          </ion-avatar>
+          <ion-label>
+            <span class="school-label">Curso de</span> <br>
+            <span class="school-name">Git y GitHub</span>
+          </ion-label>
+          <ion-icon  slot="end" class="school-icon"></ion-icon>
+        </ion-item>
+
+        <!-- Segundo Curso -->
+        <ion-item class="school-link" [routerLink]="['/curso2']" lines="none">
+          <ion-avatar slot="start">
+            <img
+              alt="Ejemplo 2"
+              src="https://w7.pngwing.com/pngs/891/677/png-transparent-python-logos-and-brands-line-filled-icon-thumbnail.png"
+              class="school-img"
+            />
+          </ion-avatar>
+          <ion-label>
+            <span class="school-label">Curso de</span> <br>
+            <span class="school-name">Python</span>
+          </ion-label>
+          <ion-icon slot="end" class="school-icon"></ion-icon>
+        </ion-item>
+
+        <!-- Tercer Curso -->
+        <ion-item class="school-link" [routerLink]="['/curso3']" lines="none">
+          <ion-avatar slot="start">
+            <img
+              alt="Ejemplo 1"
+              src="https://www.softzone.es/app/uploads-softzone.es/2021/07/Java-vs-JavaScript.jpg"
+              class="school-img"
+            />
+          </ion-avatar>
+          <ion-label>
+            <span class="school-label">Curso de</span> <br>
+            <span class="school-name">Java y JavaScript</span>
+          </ion-label>
+          <ion-icon slot="end" class="school-icon"></ion-icon>
+        </ion-item>
+
+        <!-- Cuarto Curso -->
+        <ion-item class="school-link" [routerLink]="['/curso4']" lines="none">
+          <ion-avatar slot="start">
+            <img
+              alt="Ejemplo 1"
+              src="https://ionicframework.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fframework-3.c4be4b5d.png&w=256&q=75"
+              class="school-img"
+            />
+          </ion-avatar>
+          <ion-label>
+            <span class="school-label">Curso de</span> <br>
+            <span class="school-name">Ionic y Angular</span>
+          </ion-label>
+          <ion-icon slot="end" class="school-icon"></ion-icon>
+        </ion-item>
+
+        <!-- Quinto Curso -->
+        <ion-item class="school-link" [routerLink]="['/curso5']" lines="none">
+          <ion-avatar slot="start">
+            <img
+              alt="Ejemplo 1"
+              src="https://notipress.mx/img/content/15062.jpg"
+              class="school-img"
+            />
+          </ion-avatar>
+          <ion-label>
+            <span class="school-label">Curso de</span> <br>
+            <span class="school-name">Inteligencia Artificial</span>
+          </ion-label>
+          <ion-icon slot="end" class="school-icon"></ion-icon>
+        </ion-item>
+
+        <!-- Sexto Curso -->
+        <ion-item class="school-link" [routerLink]="['/curso6']" lines="none">
+          <ion-avatar slot="start">
+            <img
+              alt="Ejemplo 1"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN3_Oy1I8Xd-nX3ArSt14VfKwspmpHDGbMZQ&s"
+              class="school-img"
+            />
+          </ion-avatar>
+          <ion-label>
+            <span class="school-label">Curso de</span> <br>
+            <span class="school-name">TypeScript</span>
+          </ion-label>
+          <ion-icon slot="end" class="school-icon"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </section>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+img.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-left: 10px; /* Margen para separarlo del borde */
+}
+
+.course-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cerrar:hover{
+  background-color: #d00000;
+}

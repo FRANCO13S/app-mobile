@@ -17,10 +17,13 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2022",
-    "module": "es2020",
+    "module": "ESNext",
     "lib": ["es2018", "dom"],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
   },
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

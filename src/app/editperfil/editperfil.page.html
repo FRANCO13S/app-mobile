@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <a>
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Edite sus datos</ion-title>
+    <ion-buttons slot="end" class="cerrar">
+      <ion-button [routerLink]="['/perfil']">
+        Cerrar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <div class="modal-container">
+      <h1>Hola! {{info?.nombres}}</h1>
+      <h5>Modifica o añade más sobre ti</h5>
+
+      <ion-list lines="full" *ngIf="info">
+        <ion-label style="font-weight: bold;">Correo electrónico :</ion-label> <br>
+        <ion-item>
+          <ion-label>{{info?.correo}}</ion-label>
+          <!-- Botón de editar / guardar -->
+          <ion-button fill="clear" slot="end" (click)="toggleEdit()">
+            <ion-icon [name]="isEditing ? 'checkmark' : 'create'"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item *ngIf="isEditing">
+          <ion-input [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="email"
+            type="email"
+            placeholder="Editar correo"
+            (ionBlur)="saveEmail()">
+          </ion-input>
+        </ion-item>
+        <br />
+        <ion-label style="font-weight: bold;">Teléfono :</ion-label> <br>
+        <ion-item>
+          <ion-label>{{info?.telefono}}</ion-label>
+          <!-- Botón de editar / guardar -->
+          <ion-button fill="clear" slot="end" (click)="toggleEdit1()">
+            <ion-icon [name]="isEditing1 ? 'checkmark' : 'create'"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item *ngIf="isEditing1">
+          <ion-input [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="tele"
+            type="text"
+            placeholder="Editar teléfono"
+            (ionBlur)="saveTele()">
+          </ion-input>
+        </ion-item>
+        <br />
+        <ion-label style="font-weight: bold;">Dirección :</ion-label> <br>
+        <ion-item>
+          <ion-label>{{info?.direccion}}</ion-label>
+          <!-- Botón de editar / guardar -->
+          <ion-button fill="clear" slot="end" (click)="toggleEdit2()">
+            <ion-icon [name]="isEditing2 ? 'checkmark' : 'create'"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item *ngIf="isEditing2">
+          <ion-input [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="dic"
+            type="text"
+            placeholder="Editar dirección"
+            (ionBlur)="saveDic()">
+          </ion-input>
+        </ion-item>
+        <br />
+        <ion-label style="font-weight: bold;">Fecha de nacimiento :</ion-label> <br>
+        <ion-item>
+          <ion-label>{{info?.fena}}</ion-label>
+          <!-- Botón de editar / guardar -->
+          <ion-button fill="clear" slot="end" (click)="toggleEdit3()">
+            <ion-icon [name]="isEditing3 ? 'checkmark' : 'create'"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item *ngIf="isEditing3">
+          <ion-input [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="nac"
+            type="text"
+            placeholder="Editar dirección"
+            (ionBlur)="saveNa()">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+  </form>
+</ion-content>

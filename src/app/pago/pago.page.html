@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Pagos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="cerrar" [routerLink]="['/main']">
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+  <div class="payment-container">
+    <div class="payment-header">
+      <img src="assets/img/logo.jpeg" alt="Logo" class="logo" />
+      <div class="order-number">
+        <p>Número de pedido</p>
+        <p class="order-id">7272483</p>
+      </div>
+    </div>
+    <!-- Selector de precios -->
+    <div class="price-options">
+      <button (click)="actualizarPrecio(35.00)">S/35.00</button>
+      <button (click)="actualizarPrecio(50.00)">S/50.00</button>
+      <button (click)="actualizarPrecio(100.00)">S/100.00</button>
+    </div>
+    <!-- Selector de Metodo de Pago-->
+    <div class="payment-methods">
+      <button class="method" [class.active]="selectedMethod === 'tarjeta'" (click)="selectMethod('tarjeta')">
+        <ion-img src="assets/img/card-outline.svg"></ion-img>
+        <span>Tarjeta</span>
+      </button>
+      <button class="method" [class.active]="selectedMethod === 'qr'" (click)="selectMethod('qr')">
+        <ion-img src="assets/img/qr-code-outline.svg"></ion-img>
+        <span>QR</span>
+      </button>
+      <button class="method" [class.active]="selectedMethod === 'yape'" (click)="selectMethod('yape')">
+        <ion-img src="assets/img/yape.webp"></ion-img>
+        <span>Yape</span>
+      </button>
+    </div>
+
+    <p class="notice" *ngIf="selectedMethod === 'tarjeta'">Recuerda activar tus compras por internet</p>
+
+    <!-- Formulario para Tarjeta -->
+    <div *ngIf="selectedMethod === 'tarjeta'" class="payment-form">
+      <ion-list>
+        <br />
+        <ion-input label="Número de tarjeta" label-placement="floating" fill="outline" placeholder="1234 1234 1234 1234"></ion-input>
+        <br />
+        <div class="form-row">
+          <ion-input label="Caducidad" label-placement="floating" fill="outline" placeholder="MM / AA"></ion-input>
+          <ion-input label="CVV" label-placement="floating" fill="outline" placeholder="123"></ion-input>
+        </div>
+        <br />
+        <div class="form-row">
+            <ion-input label="Nombres" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+            <ion-input label="Apellidos" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+        </div>
+          <br />
+          <ion-input label="Correo Electronico" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+          <br />
+      </ion-list>
+      <ion-button expand="block" class="pay-button">
+        Pagar S/{{ precio.toFixed(2) }}
+      </ion-button>
+    </div>
+
+    <!-- Opción para QR -->
+    <div *ngIf="selectedMethod === 'qr'" class="qr-container">
+      <p>Escanea el QR desde tu billetera favorita para finalizar con el pago.</p>
+      <div class="total-amount">
+        <br> <span>Monto total:</span> <br>
+        <h2><strong>S/ {{precio.toFixed(2)}}</strong></h2> <br>
+      </div>
+
+      <img src="assets/img/logo.png" alt="QR Code" class="qr-code" />
+      <!--<div class="wallet-icons">
+        <img src="assets/icon/plin.png" alt="Plin" />
+        <img src="assets/icon/yape.png" alt="Yape" />
+        <img src="assets/icon/interbank.png" alt="Interbank" />
+        <img src="assets/icon/bbva.png" alt="BBVA" />
+        <img src="assets/icon/scotiabank.png" alt="Scotiabank" />
+        <img src="assets/icon/more.png" alt="More" />
+      </div> -->
+    </div>
+
+    <!-- Opción para Yape -->
+    <div *ngIf="selectedMethod === 'yape'" class="yape-instructions">
+      <img src="assets/img/yape.png" alt="Yape Logo" class="yape-logo0" />
+      <h3>Paga con tu <br> <strong>Código de aprobación</strong></h3>
+      <br /><br />
+      <p class="donde"><strong>¿Dónde lo encuentro?</strong></p>
+      <div class="yape-info">
+        <img src="assets/img/ymenu.png" alt="Yape Logo" class="yape-logo1" />
+        <br /><br />
+        <p>Encuéntralo en el <br><strong>menú de tu app Yape</strong>.</p><br /><br />
+      </div>
+      <div class="yape-info">
+        <img src="assets/img/copy.png" alt="Yape Logo" class="yape-logo2" />
+        <br /><br />
+        <p><strong>Cópialo y regresa aquí</strong><br> para continuar.</p>
+      </div>
+    </div>
+
+    <ion-button *ngIf="selectedMethod === 'yape'" expand="block" class="cont">
+      Continuar
+    </ion-button>
+
+    <div>
+      <p class="footer-text">Powered by<img src="assets/img/izi.png" alt="Izipay Logo" /></p>
+    </div>
+  </div>
+</form>
+</ion-content>

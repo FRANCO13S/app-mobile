@@ -106,7 +106,9 @@
                 "output": "assets"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss"],
             "scripts": []
           },
           "configurations": {
@@ -126,7 +128,10 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"]
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ],
+    "analytics": "0c0a0197-2215-45d3-af7d-3df2cc488f12"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

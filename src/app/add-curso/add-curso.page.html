@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Logo al lado izquierdo -->
+      <a routerLink="/main">
+        <img src="assets/img/logo.jpeg" alt="Logo" class="logo">
+      </a>
+    </ion-buttons>
+    <ion-title>Agrega Cursos Nuevos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/cursos']">
+        Cerrar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <br />
+      <ion-input type="text" required [(ngModel)]="curs.nombre"
+      label="Curso" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+    </ion-item>
+      <br />
+    <ion-item>
+      <ion-input type="text" required [(ngModel)]="curs.precio"
+      label="Precio" label-placement="floating" fill="outline" placeholder="Ingrese aquí"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button class="ion-padding" color="primary" expand="full" (click)="createCurso(curs)">Crear</ion-button>
+</ion-content>
